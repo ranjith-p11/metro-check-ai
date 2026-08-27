@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.next/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.*.local
+
+# SQLite database (ephemeral — recreated on each boot)
+backend/src/database/database.sqlite
+
+# Uploaded files (ephemeral)
+backend/src/uploads/*
+!backend/src/uploads/.gitkeep
+
+# Tesseract trained data (large binary — downloaded at runtime)
+*.traineddata
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

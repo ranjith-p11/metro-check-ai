@@ -1,15 +1,16 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "metro-check-backend",
+  "version": "2.0.0",
+  "description": "Metro-Check AI — Legal Metrology Compliance Backend",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["metrology", "ocr", "compliance"],
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.6",
