@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ShieldAlert, AlertTriangle, Clock, Search, Filter } from 'lucide-react';
 
 const mockViolations = [
@@ -7,14 +7,14 @@ const mockViolations = [
   { id: 3, inspection_id: 2, rule_id: 'LM-006', severity: 'LOW', description: 'Potential font size issue — requires officer verification', status: 'Pending', date: new Date(Date.now() - 86400000).toISOString(), product: 'Chocolate Chip Biscuits', brand: 'Parle' },
 ];
 
-const severityConfig: Record<string, { cls: string; icon: JSX.Element }> = {
+const severityConfig: Record<string, { cls: string; icon: React.ReactNode }> = {
   HIGH: { cls: 'bg-red-100 text-red-700 border border-red-200', icon: <ShieldAlert className="w-4 h-4" /> },
   MEDIUM: { cls: 'bg-amber-100 text-amber-700 border border-amber-200', icon: <AlertTriangle className="w-4 h-4" /> },
   LOW: { cls: 'bg-yellow-100 text-yellow-700 border border-yellow-200', icon: <Clock className="w-4 h-4" /> },
 };
 
 export default function Violations() {
-  const [violations, setViolations] = useState(mockViolations);
+  const [violations] = useState(mockViolations);
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<'ALL' | 'HIGH' | 'MEDIUM' | 'LOW'>('ALL');
 
